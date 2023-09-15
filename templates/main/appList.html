@@ -1,0 +1,110 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../../public/main/css/applist.css" />
+
+
+</head>
+
+<img class="sptransLogo" src="../../public/main/img/logo_sptrans_branca.png">
+
+<body>
+  <div id="modalOverlay"></div>
+
+  <div class="containerMenu">
+    <div class="sidebar">
+      <h3>Dashboard</h3>
+      <!---------------------Categorias------------------------>
+      <a href="#" onclick="showCategory('Associação')">Categoria 1</a>
+
+      <a href="#" onclick="showCategory('Alteração')">Categoria 2</a>
+
+      <a href="#" onclick="showCategory('Tipo de Aplicação')">Categoria 3</a>
+    </div>
+    <div class="content">
+      <div id="infoModal" class="fade2">
+
+        <img id="logoModal" src="../../public/main/img/success.png">
+        <h1 id="modalStatus">Sucesso</h1>
+        <p id="modalText">Enviado com sucesso</p>
+
+        <div class="showDesc" id="detalheErro">
+          <details>
+            <summary>
+              Detalhes
+              <img src="../../public/main/img/arrow.png">
+            </summary>
+            <!----------------------------------------Descrição do erro-------------------------------------------->
+            <p id="descErro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at magna risus.
+              Nullam
+              vel ligula convallis, convallis augue ut, suscipit urna. Maecenas malesuada velit in dapibus commodo.
+              Proin
+              a vehicula ipsum. Morbi vitae nibh mattis, interdum tortor in, luctus felis.</p>
+
+          </details>
+        </div>
+
+        <button id="confirmarModal" onclick="closeModal()">Confirmar</button>
+      </div>
+
+      <div class="titulo">
+        <h2>Executar Alteração</h2>
+        <p class="descAppList">
+          Executa aplicações previamente configuradas pelo desenvolvedor na tela de "Inserir Procedure".
+        </p>
+      </div>
+
+
+        <!--------------Apps---------------->
+        <div class="category-content fade2 " id="Associação">
+          <!--------------Apps---------------->
+          <button onclick="simularExecucao('Exemplo aplicativo 1', 'Descrição Aplicativo 1', './formulariosAjax/formapplist1.html')"
+            id="Associação de Cartão Loja virtual-18">Aplicativo 1</button>
+        </div>
+
+
+
+        <div class="category-content fade2" id="Alteração">
+          <!--------------Apps---------------->
+          <button onclick="simularExecucao('Exemplo aplicativo 1', 'Exemplo descrição', './formulariosAjax/form2.html')" id="Teste v3-19">Aplicativo 1</button>
+          <button onclick="simularExecucao('Exemplo aplicativo 2', 'Exemplo descrição', './formulariosAjax/form3.html')" id="tesye vlad-20">Aplicativo 2</button>
+          <button onclick="simularExecucao('Exemplo aplicativo 3', 'Exemplo descrição', './formulariosAjax/form4.html')" id="Teste Soma-22">Aplicativo 3</button>
+          <button onclick="simularExecucao('Exemplo aplicativo 4', 'Exemplo descrição', './formulariosAjax/form5.html')" id="soma-23">Aplicativo 4</button>
+
+        </div>
+
+        <div class="category-content fade2" id="Tipo de Aplicação">
+          <!--------------Apps---------------->
+          <button onclick="simularExecucao('Exemplo aplicativo 1', 'Exemplo descrição', './formulariosAjax/form6.html')" id="Associa-21">Aplicativo 1</button>
+        </div>
+
+
+
+      <div id="valCont" class="fade2">
+        <h4 id="tituloApp">Nome</h4>
+        <p class="descAppList" id="descApp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat
+          vestibulum
+          tempor. </p>
+        <p id="errorMsg">*todos os campos devem ser preenchidos</p>
+
+        <form class="formExec">
+          <label for="input" id="label">Argumento</label>
+          <input type="text" id="input" class="inputsExec" tabindex="1">
+          <div class="verificadoresText">
+            <p class="verificacaoCaractere" id="maxLen">min caracteres 200</p>
+            <p class="verificacaoCaractere" id="isNum">somente números</p>
+            <p class="verificacaoCaractere" id="minLen">200 caracteres restantes</p>
+          </div>
+
+
+          <button class="btnExec" id="btnExec" tabindex="2">Executar</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
+
+<script src="../../public/main/js/applist.js"></script>
+

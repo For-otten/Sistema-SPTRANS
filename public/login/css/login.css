@@ -1,0 +1,215 @@
+.body {
+    background: linear-gradient(
+        223deg,
+        rgb(214, 213, 213) 34.3%,
+        rgb(175, 1, 12) 1%
+    );
+    height: 100vh;
+}
+
+#mobileError{
+    display: none;
+    position: absolute;
+    top: 50%;
+    font-size: xx-large;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 25px;
+    background: white;
+    width: 71%;
+    height: 70%;
+    box-shadow: 1px 1px 1px 1920px rgba(0,0,0,0.7);
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#mobileError p {
+    padding: 10%;
+    font-family: system-ui;
+}
+
+#mobileError button{
+    background: #e2001a;
+    color: wheat;
+    width: fit-content;
+    border-radius: 14px;
+    padding: 3% 11%;
+    font-size: large;
+    align-self: center;
+    border: none;
+}
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+    transform: translate(0, -90%);
+}
+
+.containerPrincipal {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    border-radius: 50px;
+
+    background-color: white;
+    opacity: 0.95;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formularioLogin {
+    display: flex;
+    width: 40%;
+    margin: 0px 10%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.inputs {
+    padding: 18px 10px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #edf0f5;
+    border: none;
+}
+#senha {
+    margin-top: 20px;
+}
+
+.logarBtn {
+    border: none;
+    padding: 3%;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #e2001a;
+    color: white;
+    font-size: initial;
+    font-weight: bold;
+    transition: 200ms;
+    text-decoration:none
+}
+.logarBtn:hover {
+    opacity: 0.8;
+    transition: 200ms;
+}
+
+.showPasswordBtn {
+    display: none;
+}
+
+.inputContainer {
+    position: relative;
+    width: 100%;
+}
+
+.labelVerSenha {
+    position: absolute;
+    top: 72%;
+    right: 0;
+    cursor: pointer;
+    width: 5%;
+}
+::-ms-reveal {
+    display: none;
+}
+#senhaVisibilityIcon {
+    width: 100%;
+    opacity: 0.4;
+    transition: 200ms;
+}
+
+.banner {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.fade {
+    animation: fadeAnimation 1s ease-in-out;
+}
+
+@keyframes fadeAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#prevCarousel {
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    transform: translateY(-50%);
+    z-index: 1; 
+    cursor: pointer;
+    width: 3%;
+    border: none;
+    background: none;
+    opacity: 0.5;
+    transition: 200ms;
+
+
+}
+#prevCarousel:hover{
+    opacity: 1;
+    transition: 200ms;
+}
+
+#nextCarousel {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    width: 3%;
+    border: none;
+    background: none;
+    opacity: 0.5;
+    transition: 200ms;
+
+}
+#nextCarousel:hover{
+    opacity: 1;
+    transition: 200ms;
+
+}
+
+#nextImg{
+    width: 100%;
+}
+
+#prevImg{
+    width: 100%;
+}

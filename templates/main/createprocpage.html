@@ -1,0 +1,52 @@
+<img class="sptransLogo" src="../../public/main/img/logo_sptrans_branca.png" />
+<div id="errorMessage" class="fade3">
+    <p id="mensagemErr">Ocorreu um erro ao carregar os campos do formulário.</p>
+    <button onclick="closetheerror()" id="closeError">Fechar</button>
+</div>
+<div class="containerProc">
+    <div class="topoProc">
+        <h2 class="tituloProc">Inserir Procedure</h2>
+        <p class="descProc">
+            Adicionar novas procedures, permitindo que elas
+            sejam executadas posteriormente. A ferramenta pode receber como
+            parâmetros o nome da procedure, sua definição em SQL entre
+            outros parâmetros necessários para sua execução. Após a validação
+            desses parâmetros, ela se torna disponível para execução.
+        </p>
+    </div>
+
+    <form id="criarProc">
+        <h4 id="tituloInfo">Informações da Aplicação</h4>
+        <input type="hidden"> <input type="text" name="Nome_aplicativo" placeholder="Nome do Aplicativo"
+            class="formsProc" maxlength="100" required="" id="id_Nome_aplicativo">
+        <select name="tipoApp" class="formsProc" id="id_tipoApp">
+
+            <option value="Tipo de Aplicação">Tipo de Aplicação</option>
+
+            <option value="Alteração">Alteração</option>
+
+            <option value="Exclusão">Exclusão</option>
+
+            <option value="Associação">Associação</option>
+
+        </select>
+        <select name="id_banco_exec" id="select-banco" class="formsProc" required="">
+            <option value="1">SA</option>
+        </select>
+        <input type="number" name="id_grupo_user" placeholder="Grupo de Usuários" class="formsProc" required=""
+            id="id_id_grupo_user">
+        <textarea name="Descricao_Aplicativo" cols="40" rows="10" placeholder="Descrição do Aplicativo"
+            class="formsProc" required="" id="id_Descricao_Aplicativo"></textarea>
+        <select name="nome_procedure" id="selectProce" class="formsProc" maxlength="100"
+            onchange="if (this.value === 'Banco 1') carregarBanco('./formularioBanco/formulario1.html')">
+            <option>Selecione um banco</option>
+            <option>Banco 1</option>
+        </select>
+        <input type="hidden" id="num-args-input" name="num_args" value="">
+        <div id="formset-container">
+
+        </div>
+    </form>
+</div>
+
+<script src="../../public/main/js/createprocpage.js"></script>

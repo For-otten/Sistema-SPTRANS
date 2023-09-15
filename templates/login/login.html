@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../../public/login/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/login/css/login.css" />
+</head>
+
+<body class="body">
+    <div class="containerPrincipal">
+        <form class="formularioLogin" id="formulario">
+            <h1>Login</h1>
+            <div class="inputContainer">
+
+                <input type="text" name="user_login" class="inputs" id="user" placeholder="Usuário" maxlength="50"
+                    required="">
+
+                <input type="password" name="senha" class="inputs" id="senha" placeholder="Senha" maxlength="128"
+                    required="">
+                <label for="showPasswordBtn" class="labelVerSenha"><img id="senhaVisibilityIcon"
+                        src="../../public/login/img/view.png" /></label>
+            </div>
+
+            <button type="button" id="showPasswordBtn" class="showPasswordBtn">
+                Mostrar Senha
+            </button>
+
+            <a id="logar" class="logarBtn">Login</a>
+        </form>
+
+        <div class="banner">
+            <div class="carousel" id="carousel">
+                <img class="slide" src="../../public/login/img/noticia1.jpg" />
+                <img class="slide" src="../../public/login/img/noticia2.jpg" />
+                <img class="slide" src="../../public/login/img/noticia3.jpg" />
+            </div>
+        </div>
+        <button id="nextCarousel">
+            <img id="nextImg" src="../../public/login/img/next.png" />
+        </button>
+        <button id="prevCarousel">
+            <img id="prevImg" src="../../public/login/img/prev.png" />
+        </button>
+    </div>
+    <script src="../../public/login/js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #25252D;
+
+  }
+  .sptransLogo{
+    width: 10%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    display: flex;
+    margin: 2% 3% 0 0 ;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-grow: 1;
+    height: calc(100vh - 45px);
+  }
+  .disabled{
+    display: none;
+  }
+
+  .userText{
+    font-size: large;
+  }
+/* -----------------Conteúdo da pagina-----------------*/
+
+.conteudo{
+    background: #2c2c2c;
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+    animation: fadeAnimation 0.1s ease-in-out;
+
+}
+
+.boasVindas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    opacity: 0.5;
+}
+
+.logoSPtrans{
+    width: 50%;
+}
+
+.instruction{
+    opacity: 0.6;
+}
+
+#novaConsulta{
+  display: none;
+}
+/* -----------------Conteúdo da pagina-----------------*/
+
+
+/* ----------------- Menu -----------------*/
+.menuBurgue{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: #25252D;
+    padding: 1%;
+    opacity: 1;
+    transition: width 0.6s ease;
+    position: relative;
+  }   
+
+.topoMenu{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 14%;
+    position: fixed;
+
+}
+
+.minimizeMenu{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 5px 7px 5px 5px;
+    border-radius: 29px;
+  
+
+}
+.minimizeMenu:hover{
+    background-color: rgba(88, 84, 84, 0.2);
+   
+
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;   
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 10px;
+    text-decoration: none; 
+    color: inherit;
+}
+.links:hover{
+    background-color: rgb(54 53 53 / 41%);    
+   
+
+}
+
+.labelImg{
+    width: 22px;
+    margin-right: 6%;
+    opacity: 0.8;
+    background: #666666;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+
+.menuOptions{
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    position: fixed;
+    top: 10%;
+}
+
+
+#consultar{
+  display: none;
+}
+
+#sair{
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    font-size: small;
+    background: #2c2c2c;
+    position: absolute;
+    padding: 8px;
+    border-radius: 13px;
+    opacity: 0.6;
+    width: 80%;
+    bottom: 10px;
+    text-align: center;
+
+}
+
+.menuOptions h2{
+    margin-bottom: 10%;
+}
+
+.devTools{
+    margin-top: 20%;
+}
+
+.devTools p{
+    margin-bottom: 10%;
+}
+
+
+/* ----------------- Menu -----------------*/
+
+
+/*----------------- Estilos para o menu encolhido -----------------*/
+.menuBurgue.minimized {
+    width: 3%;
+    align-items: center;
+  }
+  
+  .menuBurgue.minimized .links{
+    justify-content: center;
+  }
+  .menuBurgue.minimized .labels {
+    justify-content: center;
+  }
+  
+  .menuBurgue.minimized #menuOptions {
+    font-size: 0;
+    position: fixed;
+    top: 17%;
+  }
+  
+  .menuBurgue.minimized #devTools {
+    border-top: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  .menuBurgue.minimized #minimizeMenu {
+    transform: rotate(180deg);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .menuBurgue.minimized .topoMenu {
+    flex-direction: column-reverse;
+    height: 8%;
+    position: fixed;
+    top: 9%;
+  }
+  .logoAGILink{
+    cursor: pointer;
+  }
+  .menuBurgue.minimized .logoAGILink{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: #31313166;
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px -1px #666666;
+    transition: 200ms;
+    width: 22px;
+    height: 22px;
+    margin-bottom: 13px;
+    margin-top: 15px;
+  }
+  .menuBurgue.minimized .logoAGILink:hover{
+    box-shadow: 0px 0px 5px 2px #666666;
+    transition: 200ms;
+  }
+
+  .menuBurgue.minimized .labelImg {
+    width: 95%;
+    height: 22px;
+    width: 22px;
+  }
+  
+  .menuBurgue.minimized #sair {
+    width: fit-content;
+    width: 50%;
+  }
+  
+/* -----------------Estilos para o menu encolhido -----------------*/
+
+.fade {
+  animation: fadeAnimation 1s ease-in-out;
+}
+
+@keyframes fadeAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

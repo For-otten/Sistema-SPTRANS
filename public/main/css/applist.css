@@ -1,0 +1,301 @@
+header {
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+#valCont {
+  margin: 2%;
+  display: none;
+
+}
+
+
+#infoModal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+
+  position: absolute;
+  left: 50%;
+
+  background: #25252D;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  padding: 7% 0.1%;
+  border-radius: 23px;
+  z-index: 999;
+}
+
+#modalOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+#infoModal h1 {
+  margin-bottom: 0;
+  margin-top: 7px;
+}
+
+#modalText {
+  margin: 2% 4% 4%;
+}
+
+
+#logoModal {
+  width: 12%;
+}
+
+#confirmarModal {
+  border: none;
+  background: #e2001a;
+  color: white;
+  padding: 2% 31%;
+  font-size: 15px;
+  border-radius: 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.showDesc {
+  display: none;
+  width: 73%;
+  margin-bottom: 9%;
+}
+
+.showDesc img {
+  width: 12px;
+  height: 12px;
+}
+
+summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+  align-items: baseline;
+  border-top: 1px solid white;
+}
+
+summary::marker {
+  font-size: 0;
+}
+
+details[open] {
+  & summary img {
+    transform: rotate(-90deg);
+  }
+}
+
+.formExec {
+  display: flex;
+  flex-direction: column;
+}
+
+#valCont p {
+  margin-bottom: 2%;
+}
+#valCont span{
+  color: #555555;
+  font-style: italic;
+  margin-top: 2%;
+}
+
+.inputsExec {
+  padding: 1%;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: #272727;
+  margin: 1% 1% 0%;
+  width: 50%;
+}
+
+.verificadoresText {
+  width: 52%;
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  margin-bottom: 1%;
+}
+
+
+.verificacaoCaractere {
+  color: #555555;
+  font-style: italic;
+}
+
+.btnExec {
+  cursor: pointer;
+  /*-----Estilço-----*/
+  height: fit-content;
+  padding: 1%;
+  margin-bottom: 1%;
+  border: none;
+  color: white;
+  border-radius: 17px;
+  font-weight: bold;
+  background: #e2001a;
+  opacity: 1;
+  transition: 0.1s;
+
+  /*---Posicionamento---*/
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+  z-index: 1;
+}
+
+.btnExec:hover {
+  transition: 0.1s;
+  opacity: 0.6;
+}
+
+.titulo {
+  margin: 30px;
+}
+
+.sidebar {
+  min-width: 10%;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5% 1%;
+  font-size: small;
+}
+
+.containerMenu {
+  display: flex;
+  height: 100%;
+}
+
+.descAppList {
+  opacity: 0.4;
+  width: 90%;
+  font-size: small;
+}
+
+.content {
+  flex: 1;
+  color: white;
+  overflow: auto;
+}
+
+.category-content {
+  color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: none;
+
+}
+
+.category-content button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  padding-bottom: 10px;
+  margin-left: 20px;
+}
+
+
+.category-content button {
+  padding: 2px;
+}
+
+.category-content button:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 0;
+}
+
+.category-content.active {
+  display: block;
+}
+
+.sidebar a {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.sidebar h3 {
+  color: white;
+  font-size: medium;
+}
+
+.sidebar a:hover {
+  background-color: rgb(54 53 53 / 41%);
+}
+
+.info {
+  width: 21px;
+  height: 21px;
+  margin-left: 7px;
+  opacity: 0.5;
+}
+
+#infoAppPopup {
+  display: none;
+  background-color: rgba(89, 89, 91, 0.2);
+  opacity: 0.7;
+  border-radius: 22px;
+  padding: 20px;
+  z-index: 1;
+  margin-left: 20px;
+  align-self: baseline;
+  font-size: small;
+}
+
+#errorMsg {
+  color: red;
+  display: none;
+  font-size: small;
+}
+
+.fade2 {
+  animation: fadeAnimation2 0.3s ease-in-out;
+}
+
+@keyframes fadeAnimation2 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.error-animation {
+  animation: error-glow 0.5s ease-in;
+}
+
+@keyframes error-glow {
+  0% {
+    color: #555555;
+  }
+
+  50% {
+    color: red;
+  }
+
+  100% {
+    color: red;
+  }
+}
+.campo-vazio {
+  border: 1px solid red;
+}
+.campo-erro{
+  border: 1px solid red;
+
+}
