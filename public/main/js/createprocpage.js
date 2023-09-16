@@ -21,12 +21,9 @@ function carregarBanco(url) {
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Seletor de mudança para o menu suspenso
     var selectProce = document.getElementById('selectProce');
 
-    // Adicione um evento de mudança ao menu suspenso
     selectProce.addEventListener('change', function() {
-      // Verifique se o valor selecionado é 'Banco 1'
       if (selectProce.value === 'Banco 1') {
         carregarBanco('./formularioBanco/formulario1.html');
       }

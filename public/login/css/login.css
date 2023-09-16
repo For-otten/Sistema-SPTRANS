@@ -1,35 +1,45 @@
 .body {
-    background: linear-gradient(
-        223deg,
-        rgb(214, 213, 213) 34.3%,
-        rgb(175, 1, 12) 1%
-    );
+    background: linear-gradient(223deg,
+            rgb(214, 213, 213) 34.3%,
+            rgb(175, 1, 12) 1%);
     height: 100vh;
 }
 
-#mobileError{
+#mobileError {
     display: none;
     position: absolute;
     top: 50%;
     font-size: xx-large;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
+    z-index: 999;
     border-radius: 25px;
     background: white;
     width: 71%;
     height: 70%;
-    box-shadow: 1px 1px 1px 1920px rgba(0,0,0,0.7);
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+}
+
+
 
 #mobileError p {
     padding: 10%;
     font-family: system-ui;
 }
 
-#mobileError button{
+#mobileError button {
     background: #e2001a;
     color: wheat;
     width: fit-content;
@@ -39,6 +49,128 @@
     align-self: center;
     border: none;
 }
+
+#introSystem {
+    background-color: #2c2c2c;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 23%;
+    height: 50%;
+    border-radius: 9px;
+    z-index: 998;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#introSystem h3 {
+    margin: 0 5% 3%;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+#introSystem p {
+    margin: 0 12%;
+    opacity: 0.8;
+}
+
+#introSystem strong {
+    font-weight: bold;
+    color: #e2001a;
+}
+
+#introSystem button {
+    align-self: center;
+    cursor: pointer;
+    background: rgb(25, 118, 210);
+    padding: 3% 33%;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    transition: 200ms;
+
+}
+
+#Navigation {
+    align-self: center;
+}
+
+#Navigation .navButton {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #555;
+    cursor: pointer;
+}
+
+#Navigation .navButton:hover {
+    background-color: #f5f5f5;
+
+}
+
+#Navigation input[type="radio"] {
+    pointer-events: none;
+
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: #3498db;
+}
+
+#tutorial {
+    margin-top: 12%;
+}
+
+#tutorial1 {
+    display: none;
+    margin-top: 12%;
+}
+
+#introSystem button:hover {
+    opacity: 0.7;
+    transition: 200ms;
+}
+
+#introSystem.dark-mode {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+#introSystem.light-mode {
+    background-color: white;
+    color: black;
+}
+
+b {
+    font-size: large;
+    font-weight: bold;
+}
+
+#usuarios {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#usuarios p {
+    margin: 0;
+}
+
 h1 {
     font-weight: bold;
     font-size: xx-large;
@@ -78,6 +210,7 @@ h1 {
     background-color: #edf0f5;
     border: none;
 }
+
 #senha {
     margin-top: 20px;
 }
@@ -93,8 +226,9 @@ h1 {
     font-size: initial;
     font-weight: bold;
     transition: 200ms;
-    text-decoration:none
+    text-decoration: none
 }
+
 .logarBtn:hover {
     opacity: 0.8;
     transition: 200ms;
@@ -116,9 +250,11 @@ h1 {
     cursor: pointer;
     width: 5%;
 }
+
 ::-ms-reveal {
     display: none;
 }
+
 #senhaVisibilityIcon {
     width: 100%;
     opacity: 0.4;
@@ -130,7 +266,7 @@ h1 {
     height: 100%;
     overflow: hidden;
     position: relative;
-    
+
 }
 
 .banner img {
@@ -160,6 +296,7 @@ h1 {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -171,7 +308,7 @@ h1 {
     top: 50%;
     left: 58%;
     transform: translateY(-50%);
-    z-index: 1; 
+    z-index: 1;
     cursor: pointer;
     width: 3%;
     border: none;
@@ -181,7 +318,8 @@ h1 {
 
 
 }
-#prevCarousel:hover{
+
+#prevCarousel:hover {
     opacity: 1;
     transition: 200ms;
 }
@@ -200,16 +338,46 @@ h1 {
     transition: 200ms;
 
 }
-#nextCarousel:hover{
+
+#nextCarousel:hover {
     opacity: 1;
     transition: 200ms;
 
 }
 
-#nextImg{
+#nextImg {
     width: 100%;
 }
 
-#prevImg{
+#prevImg {
     width: 100%;
 }
+
+.esqueci {
+    width: fit-content;
+    color: #101dff;
+    cursor: pointer;
+    margin-top: 4%;
+    align-self: center;
+}
+
+#senhaIncorreta{
+    width: fit-content;
+    color: red;
+    font-size: small;
+    margin-top: 3%;
+    display: none;
+}
+
+@media screen and (max-width: 1366px) {
+    #introSystem p {
+        font-size: smaller;
+    }
+    #introSystem h3{
+        font-size: larger;
+    }
+    .esqueci{
+        font-size: small;
+    }
+  }
+  

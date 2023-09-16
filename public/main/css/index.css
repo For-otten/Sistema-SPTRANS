@@ -98,7 +98,9 @@ html, body {
    
 
 }
-
+.usuarios{
+  display: flex;
+}
 .links{
     display: flex;
     align-items: center;

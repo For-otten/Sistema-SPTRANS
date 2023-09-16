@@ -79,15 +79,10 @@ inicio.addEventListener('click', ()=>{
 })
 novaProcedure.addEventListener('click', ()=> {
     carregarPagina('./createprocpage.html')
-    console.log('cliq')
 });
 
-// Adicione eventos de clique para outras páginas
-// ...
 
-// Carregue a página inicial por padrão
 carregarPagina('./index.html');
 
-//---------------------
 
 

@@ -67,4 +67,86 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+function isDarkModePreferred() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
 
+function toggleMode() {
+  const introSystem = document.getElementById('introSystem');
+  if (isDarkModePreferred()) {
+    introSystem.classList.add('dark-mode');
+    introSystem.classList.remove('light-mode');
+  } else {
+    introSystem.classList.remove('dark-mode');
+    introSystem.classList.add('light-mode');
+  }
+}
+
+toggleMode();
+function showTutorial(tutorialId) {
+  const tutorials = document.querySelectorAll('[id^="tutorial"]');
+  tutorials.forEach(tutorial => {
+    tutorial.style.display = 'none';
+  });
+
+  const tutorialToShow = document.getElementById(tutorialId);
+  tutorialToShow.style.display = 'block';
+
+  const radioButtons = document.querySelectorAll('input[name="Radio"]');
+  if (tutorialId === 'tutorial') {
+    radioButtons[0].checked = true;
+    radioButtons[1].checked = false;
+  } else {
+    radioButtons[0].checked = false;
+    radioButtons[1].checked = true;
+  }
+}
+
+function closeIntro() {
+  const introSystem = document.getElementById('introSystem')
+  const modalOverlay = document.getElementById('modalOverlay')
+  modalOverlay.style.display = 'none'
+  introSystem.style.display = 'none'
+}
+
+function abrirNovamente() {
+  const introSystem = document.getElementById('introSystem')
+  const modalOverlay = document.getElementById('modalOverlay')
+  modalOverlay.style.display = 'block'
+  introSystem.style.display = 'flex'
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('logar').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('user').value;
+    const password = document.getElementById('senha').value;
+    const senhaIncorreta = document.getElementById('senhaIncorreta')
+    const inputUser = document.getElementById('user')
+    const inputSenha = document.getElementById('senha')
+
+    if (username === 'admin' && password === 'admin') {
+      window.location.href = './templates/main/base.html';
+      senhaIncorreta.style.display = 'none'
+      inputUser.style.border = 'none'
+      inputSenha.style.border = 'none'
+    } else if (username === 'user' && password === 'user') {
+      window.location.href = './templates/main/baseUser.html';
+      senhaIncorreta.style.display = 'none'
+      inputUser.style.border = 'none'
+      inputSenha.style.border = 'none'
+    } else if (username === '' && password === '') {
+      senhaIncorreta.style.display = 'block'
+      senhaIncorreta.innerHTML = '*todos os campos devem ser preenchidos'
+      inputUser.style.border = '1px solid red'
+      inputSenha.style.border = '1px solid red'
+
+    } else {
+      senhaIncorreta.style.display = 'block'
+      senhaIncorreta.innerHTML = '*usuário ou senha incorretos'
+      inputUser.style.border = '1px solid red'
+      inputSenha.style.border = '1px solid red'
+    }
+  });
+});

@@ -135,7 +135,6 @@ function simularExecucao(nome, desc, url) {
 
 
 
-                // Verificação para número mínimo de caracteres
                 input.addEventListener("input", function () {
                     var divVerificadores = input.nextElementSibling;
                     if (divVerificadores) {
@@ -258,5 +257,5 @@ function Verificador() {
     if (!hasError && !algumVazio) {
         updateModal('success', 'Enviado com Sucesso!')
     }
-} 
+}
 

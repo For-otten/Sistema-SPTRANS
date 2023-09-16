@@ -9,13 +9,49 @@
 </head>
 
 <body class="body">
+    <div id="modalOverlay"></div>
     <div id="mobileError">
         <p>Este site não é otimizado para dispositivos móveis. <br><br>Recomendamos o acesso a partir de um desktop para
             ter a experiência adequada.</p>
         <button onclick="redirecionar()" type="button">Confirmar</button>
     </div>
     <div id="introSystem">
+        <div id="tutorial">
+            <h3>Introdução</h3>
+            <p>Esta é uma versão estática de um sistema criado para a <strong>SPTrans</strong> por uma equipe de
+                <strong>dois
+                    desenvolvedores.</strong><br><br>
+                Neste preview, você poderá explorar as ferramentas disponíveis no lado do cliente e ter uma
+                <strong>simulação</strong> das
+                funcionalidades presentes no produto final.
 
+        </div>
+        <div id="tutorial1">
+            <h3>Instruções</h3>
+            <p>O nosso sistema possui distintas <strong>permissões de acesso</strong> e, para simular esses níveis,
+                foram criados <strong>dois
+                    perfis padrão.</strong> Utilize as seguintes credenciais para fazer login e explorar cada um deles:
+            </p><br><br>
+            <div id="usuarios">
+                <p><b>Administrador</b><br>
+                    Usuário: admin <br>
+                    Senha: admin
+                    </h3><br><br>
+                <p><b>Usuário Comum</b><br>
+                    Usuário: user <br>
+                    Senha: user
+                </p>
+            </div>
+        </div>
+
+        <div id="Navigation">
+            <button onclick="showTutorial('tutorial')" class="navButton">&#8249; Anterior</button>
+            <input type="radio" id="Radio1" name="Radio" checked>
+            <input type="radio" id="Radio2" name="Radio">
+            <button onclick="showTutorial('tutorial1')" class="navButton">Próximo &#8250;</button>
+        </div>
+
+        <button type="button" onclick="closeIntro()">Confirmar</button>
     </div>
     <div class="containerPrincipal">
         <form class="formularioLogin" id="formulario">
@@ -34,8 +70,10 @@
             <button type="button" id="showPasswordBtn" class="showPasswordBtn">
                 Mostrar Senha
             </button>
-
+            <p id="senhaIncorreta">*Usuário ou senha incorretos</p>
             <a id="logar" class="logarBtn">Login</a>
+
+            <a class="esqueci" onclick="abrirNovamente()">Esqueceu os usuários?</a>
         </form>
 
         <div class="banner">
@@ -52,11 +90,14 @@
             <img id="prevImg" src="./public/login/img/prev.png" />
         </button>
     </div>
-    <script src="./public/login/js/login.js"></script>
+    <script src="./public/login/js/login.js" ></script>
+
     <script>
 
         const mobileError = document.getElementById('mobileError')
         const introSystem = document.getElementById('introSystem')
+        const modalOverlay = document.getElementById('modalOverlay')
+
 
         function isDispositivoMovel() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -67,10 +108,9 @@
                 mobileError.style.display = 'flex'
             } else {
                 introSystem.style.display = 'flex'
-                alert('to no pc')
+                modalOverlay.style.display = 'block'
             }
         }
-
         window.onload = exibirAlertaDispositivoMovel;
 
         function redirecionar() {
