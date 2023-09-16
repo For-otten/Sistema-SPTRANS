@@ -45,6 +45,8 @@ function applyTimeoutOnLoad() {
         minimizeMenu.classList.add(minimizedClass);
         logoAGI.src = '../../public/main/img/logoAGIencolhido.png';
         menuOptions.style.fontSize = '0px';
+        tituloUser.style.fontSize = '0'
+
 
     }
 }
