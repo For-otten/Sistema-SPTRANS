@@ -7,13 +7,13 @@ showPasswordBtn.addEventListener('click', function () {
 
     senhaInput.type = 'text';
     showPasswordBtn.textContent = 'Esconder Senha';
-    senhaVisibilityIcon.src = '../../public/login/img/hide.png';
+    senhaVisibilityIcon.src = './public/login/img/hide.png';
     senhaVisibilityIcon.style.opacity = 1
 
   } else {
     senhaInput.type = 'password';
     showPasswordBtn.textContent = 'Mostrar Senha';
-    senhaVisibilityIcon.src = '../../public/login/img/view.png';
+    senhaVisibilityIcon.src = './public/login/img/view.png';
     senhaVisibilityIcon.style.opacity = 0.4
 
   }
